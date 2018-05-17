@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title> Ecuacion de 2do Grado  </title>
+</head>
+<body>
+<script languaje="javascrip">
+var a;
+var b;
+var c;
+var x1;
+var x2;
+   function calcular()
+    {
+      a=parseInt(document.formulario.ax2.value);
+	  b=parseInt(document.formulario.bx.value);
+	  c=parseInt(document.formulario.c.value);
+	   
+  	    x1= ((-1*-b) + (Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a);
+		x2= ((-1*-b) - (Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a);
+	    
+		document.formulario.x.value=x1;
+	    document.formulario.x1.value=x2;
+	 
+    }
+	
+</script>
+<h2> Ecuacion de segundo grado </h2>
+<form name ="formulario">
+  <h4> ax^2: <input type="tex" id ="ax2" /><br /></h4>
+  <h4> bx: <input type="tex" id ="bx"/><br /> </h4>
+  <h4> c: <input type="tex" id="c" /><br /> </h4>
+   <input type="button" value="Calcular" onclick="calcular()"> 
+  <h4> X1: <input type="tex" id ="x"/><br /> </h4>
+  <h4> X2: <input type="tex" id="x1" /><br /> </h4>
+   
+</form>
+</body>
+</html>
